@@ -1,8 +1,6 @@
-
 using BookOrder.Dtos;
 using BookOrder.Models;
 using BookOrder.Repositories;
-
 namespace BookOrder.Services
 {
     public class BookService : IBookService
@@ -13,7 +11,6 @@ namespace BookOrder.Services
         {
             _repository = repository;
         }
-
         public async Task<IEnumerable<BooksDto>> GetAllAsync()
         {
             var books = await _repository.GetAllAsync();
@@ -22,11 +19,10 @@ namespace BookOrder.Services
                 Id = b.Id,
                 Title = b.Title,
                 Author = b.Author,
-                Price = (decimal)b.Price,
+                Price = (double)b.Price,
                 PublishedDate = b.PublishedDate
             });
         }
-
         public async Task<BooksDto?> GetByIdAsync(int id)
         {
             var book = await _repository.GetByIdAsync(id);
@@ -37,11 +33,10 @@ namespace BookOrder.Services
                 Id = book.Id,
                 Title = book.Title,
                 Author = book.Author,
-                Price = (decimal)book.Price,
+                Price = (double)book.Price,
                 PublishedDate = book.PublishedDate
             };
         }
-
         public async Task<BooksDto> CreateAsync(CreateBookDto dto)
         {
             var book = new Book
@@ -51,7 +46,6 @@ namespace BookOrder.Services
                 Price = (double)dto.Price,
                 PublishedDate = dto.PublishedDate
             };
-
             await _repository.AddAsync(book);
             await _repository.SaveChangesAsync();
 
@@ -60,11 +54,10 @@ namespace BookOrder.Services
                 Id = book.Id,
                 Title = book.Title,
                 Author = book.Author,
-                Price = (decimal)book.Price,
+                Price = (double)book.Price,
                 PublishedDate = book.PublishedDate
             };
         }
-
         public async Task<BooksDto?> UpdateAsync(int id, UpdateBookDto dto)
         {
             var book = await _repository.GetByIdAsync(id);
@@ -83,11 +76,10 @@ namespace BookOrder.Services
                 Id = book.Id,
                 Title = book.Title,
                 Author = book.Author,
-                Price = (decimal)book.Price,
+                Price = (double)book.Price,
                 PublishedDate = book.PublishedDate
             };
         }
-
         public async Task<bool> DeleteAsync(int id)
         {
             await _repository.DeleteAsync(id);

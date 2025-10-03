@@ -1,17 +1,6 @@
-### Get all orders
-GET http://localhost:5172/api/orders
-Accept: application/json
-
-###
-
-### Get order by ID
-GET http://localhost:5172/api/orders/1
-Accept: application/json
-
-###
 
 ### Create a new order
-POST http://localhost:5172/api/orders
+POST http://localhost:5172/api/localhost:5172/api/orders/1
 Content-Type: application/json
 
 { 
@@ -33,6 +22,16 @@ Content-Type: application/json
     "PublishedDate": "1925-04-10"
 }
     
+
+
+ GET http://localhost:5172/api/orders/1
+Accept: application/json        
+{
+    "id": 1,
+    "Title": "The Great Gatsby",
+    "Author": "F. Scott Fitzgerald",
+    "PublishedDate": "1925-04-10"
+}
 
 ###
 

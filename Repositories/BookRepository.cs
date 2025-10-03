@@ -8,9 +8,9 @@ namespace BookOrder.Repositories
 {
     public class BookRepository : IBookRepository
     {
-        private readonly ApplicationDbContext _context;
+        private readonly BookOrderDbContext _context;
 
-        public BookRepository(ApplicationDbContext context)
+        public BookRepository(BookOrderDbContext context)
         {
             _context = context;
         }

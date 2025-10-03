@@ -1,7 +1,4 @@
-
 using BookOrder.Dtos;
-
-
 namespace BookOrder.Services
 {
     public interface IBookService

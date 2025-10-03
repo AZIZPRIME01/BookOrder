@@ -3,10 +3,10 @@ using BookOrder.Models;
 
 namespace BookOrder.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class BookOrderDbContext : DbContext
     {
         // Constructor for dependency injection
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        public BookOrderDbContext(DbContextOptions<BookOrderDbContext> options)
             : base(options)
         {
         }

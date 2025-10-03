@@ -1,4 +1,3 @@
-
 namespace BookOrder.Dtos
 {
     public class UpdateBookDto
@@ -6,7 +5,7 @@ namespace BookOrder.Dtos
         public string Title { get; set; }
         public string Author { get; set; }
         public double Price { get; set; }
-        public int PublishedDate { get; set; }
+        public string PublishedDate { get; set; }
     }
 }
 
