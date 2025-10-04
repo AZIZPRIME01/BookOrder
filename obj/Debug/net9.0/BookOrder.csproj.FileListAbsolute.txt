@@ -130,3 +130,6 @@
 /home/aziz/Desktop/OrderBook/BookOrder/obj/Debug/net9.0/BookOrder.genruntimeconfig.cache
 /home/aziz/Desktop/OrderBook/BookOrder/obj/Debug/net9.0/ref/BookOrder.dll
 /home/aziz/Desktop/OrderBook/BookOrder/obj/Debug/net9.0/BookOrder.sourcelink.json
+/home/aziz/Desktop/OrderBook/BookOrder/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/aziz/Desktop/OrderBook/BookOrder/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/aziz/Desktop/OrderBook/BookOrder/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll

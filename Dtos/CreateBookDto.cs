@@ -5,9 +5,8 @@ namespace BookOrder.Dtos
     public class CreateBookDto
     {
         [Required]  
-        public string Title { get; set; } = string.Empty!;
-        [Required]
-        public string Author { get; set; }= string.Empty!;
+        public string Title { get; set; } 
+        public string Author { get; set; }
         [Required]
         public double Price { get; set; } = 0.0;    
         [Required]

@@ -15,11 +15,11 @@ POST http://localhost:5000/api/books
 Content-Type: application/json
 
 {
-  "id": 1,
-  "title": "C# in Depth",
-  "author": "Jon Skeet",
-  "price": 49.99,
-  "publishedDate": "2025-10-04T00:00:00Z"
+  "id": 98,
+  "title": "Graf monter krista",
+  "author": "Jon lll",
+  "price": 20.99,
+  "publishedDate": "2000-10-04T00:00:00Z"
 }
 
 ###
@@ -28,9 +28,9 @@ Content-Type: application/json
 PUT http://localhost:5000/api/books/1
 Content-Type: application/json
 
-{
-    "title": "C# in Depth - Updated",
-    "author": "Jon Skeet",
+{    
+    "title": "Graf monter krista",
+    "author": "Jon kkk",
     "price": 39.99,
     "publishedDate": "2025-10-04T00:00:00Z"
 }

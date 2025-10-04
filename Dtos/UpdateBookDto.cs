@@ -4,9 +4,9 @@ namespace BookOrder.Dtos
     public class UpdateBookDto
     {
         [Required]  
-        public string Title { get; set; } = string.Empty!;
+        public string Title { get; set; }
         [Required]
-        public string Author { get; set; } = string.Empty!;
+        public string Author { get; set; } 
         [Required]
         public double Price { get; set; } = 0.0;
         [Required]
