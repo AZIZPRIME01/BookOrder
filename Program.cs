@@ -7,13 +7,24 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
+var connectionString = builder.Configuration.GetConnectionString("SampleDbConnection");
 
-builder.Services.AddDbContext<BookOrderDbContext>(options =>
+/* 
+builder.Services.AddEntityFrameworkNpgsql().AddDbContext<BookOrderDbContext>(Options
+=> Options.UseNpgsql(connectionString));
+
+  */
+
+/*  builder.Services.AddDbContext<BookOrderDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+  */
+ 
+builder.Services.AddDbContext<BookOrderDbContext>(options =>
+    options.UseNpgsql(connectionString));
 
-    
+
 builder.Services.AddScoped<IBookRepository, BookRepository>();
-builder.Services.AddScoped<BookService, BookService>();
+builder.Services.AddScoped<IBookService, BookService>();
 
 
 var app = builder.Build();

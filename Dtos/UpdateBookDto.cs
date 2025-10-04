@@ -1,11 +1,16 @@
+using System.ComponentModel.DataAnnotations;
 namespace BookOrder.Dtos
 {
     public class UpdateBookDto
     {
-        public string Title { get; set; }
-        public string Author { get; set; }
-        public double Price { get; set; }
-        public string PublishedDate { get; set; }
+        [Required]  
+        public string Title { get; set; } = string.Empty!;
+        [Required]
+        public string Author { get; set; } = string.Empty!;
+        [Required]
+        public double Price { get; set; } = 0.0;
+        [Required]
+        public DateTime PublishedDate { get; set; } = DateTime.Now;
     }
 }
 

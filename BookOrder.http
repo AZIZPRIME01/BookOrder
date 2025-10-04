@@ -1,42 +1,42 @@
+### Get all books
+GET http://localhost:5000/api/books
+Accept: application/json
+
+###
+
+### Get order by ID
+GET http://localhost:5000/api/books/1
+Accept: application/json
+
+###
 
 ### Create a new order
-POST http://localhost:5172/api/localhost:5172/api/orders/1
+POST http://localhost:5000/api/books
 Content-Type: application/json
 
-{ 
-    "id": 1,
-    "Title": "The Great Gatsby",
-    "Author": "F. Scott Fitzgerald",
-    "PublishedDate": "1925-04-10"
+{
+  "id": 1,
+  "title": "C# in Depth",
+  "author": "Jon Skeet",
+  "price": 49.99,
+  "publishedDate": "2025-10-04T00:00:00Z"
 }
 
 ###
 
 ### Update an order
-PUT http://localhost:5172/api/orders/1
+PUT http://localhost:5000/api/books/1
 Content-Type: application/json
 
-{   "id": 1,
-     "Title": "The Great Gatsby",
-     "Author": "F. Scott Fitzgerald",
-    "PublishedDate": "1925-04-10"
-}
-    
-
-
- GET http://localhost:5172/api/orders/1
-Accept: application/json        
 {
-    "id": 1,
-    "Title": "The Great Gatsby",
-    "Author": "F. Scott Fitzgerald",
-    "PublishedDate": "1925-04-10"
+    "title": "C# in Depth - Updated",
+    "author": "Jon Skeet",
+    "price": 39.99,
+    "publishedDate": "2025-10-04T00:00:00Z"
 }
 
 ###
 
 ### Delete an order
-DELETE http://localhost:5172/api/orders/1
+DELETE http://localhost:5000/api/books/1
 Accept: application/json
-
-###
